@@ -1,0 +1,46 @@
+Instagram
+username, pictures, posts, comments, merchandise, likes, transactions
+
+username has many posts. pictures has many likes. transactions belong to merchandize
+comments belong to pictures. user has many transactions. 
+
+username has many
+    - pictures
+    - posts
+    - comments
+transactions has many
+    - username
+    - merchandise
+merchandise belongs to
+    - username
+    - photos
+    - transactions
+
+## attributes
+username npx sequelize model:generate --name: Username attributes 'name:string, hash:string, account_number:string'
+    - name
+    - hash
+    - account number
+transactions npx sequelize model:generate --name: transaction attributes 'amounmt:decimal, receipient_id:integer,  sender_id:integer'
+    - id (primary key)
+    - amount
+    - receipient_id (foreign keys to users)
+    - sender_id (foreign key to user)
+contacts npx sequelize model:generate --name: contact attributes 'user_id:integer, sender_id:integer
+    - user_id (foreign key to user)
+    - contact_id (foreign key to user)
+comments npx sequelize model:generate --name: transaction comments 'content:string, user_id:string, transaction_id:integer
+    - content
+    - user_id (foreign key to user)
+    - transaction_id (foreign key to user)
+
+
+linked In
+username, pictures, posts, comments, resumes, endosements
+
+Reddit
+username, pictures, posts, comments, gifs
+
+Discord
+username, pictures, posts, comments,  servers, gifs, recordings
+
